@@ -118,8 +118,10 @@ bool CANopenInit(cob_srvs::Trigger::Request &req, cob_srvs::Trigger::Response &r
     }
 
     bool init_success = canopen::init(deviceFile, chainName, canopen::syncInterval);
-    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
 
+    bool init_success = canopen::init(deviceFile, chainName, canopen::syncInterval);
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
 
 
     if(init_success)
